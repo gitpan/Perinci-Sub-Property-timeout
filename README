@@ -1,9 +1,8 @@
 NAME
-    Perinci::Sub::Wrapper::property::timeout - Specify function execution
-    time limit
+    Perinci::Sub::property::timeout - Specify function execution time limit
 
 VERSION
-    version 0.01
+    version 0.02
 
 SYNOPSIS
      # in function metadata

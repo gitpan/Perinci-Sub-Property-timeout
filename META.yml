@@ -7,7 +7,7 @@ build_requires:
 configure_requires:
   Module::Build: 0.3601
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300002, CPAN::Meta::Converter version 2.112150'
+generated_by: 'Dist::Zilla version 4.300006, CPAN::Meta::Converter version 2.113640'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -21,4 +21,4 @@ requires:
 resources:
   homepage: http://search.cpan.org/dist/Perinci-Sub-property-timeout/
   repository: http://github.com/sharyanto/perl-Perinci-Sub-property-timeout
-version: 0.01
+version: 0.02
