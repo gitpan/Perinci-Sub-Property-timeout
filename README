@@ -2,7 +2,7 @@ NAME
     Perinci::Sub::property::timeout - Specify function execution time limit
 
 VERSION
-    version 0.02
+    version 0.03
 
 SYNOPSIS
      # in function metadata

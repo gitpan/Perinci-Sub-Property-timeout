@@ -6,7 +6,7 @@ use warnings;
 
 use Perinci::Util qw(declare_property);
 
-our $VERSION = '0.02'; # VERSION
+our $VERSION = '0.03'; # VERSION
 
 declare_property(
     name => 'timeout',
@@ -14,6 +14,7 @@ declare_property(
     schema => ['int*' => {min=>0}],
     wrapper => {
         meta => {
+            v       => 2,
             # highest, we need to disable alarm right after call
             prio    => 1,
             convert => 1,
@@ -53,7 +54,7 @@ Perinci::Sub::property::timeout - Specify function execution time limit
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 
