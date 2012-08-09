@@ -5,6 +5,7 @@ author:
 build_requires:
   Module::Build: 0.3601
   Test::More: 0.96
+  Test::Perinci::Sub::Wrapper: 0
 configure_requires:
   Module::Build: 0.3601
 dynamic_config: 0
@@ -13,12 +14,12 @@ license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
-name: Perinci-Sub-property-timeout
+name: Perinci-Sub-Property-timeout
 requires:
-  Perinci: 0
-  Perinci::Sub::Wrapper: 0.24
+  Perinci::Sub::Wrapper: 0.30
+  Perinci::Util: 0
   perl: 5.010000
 resources:
-  homepage: http://search.cpan.org/dist/Perinci-Sub-property-timeout/
-  repository: http://github.com/sharyanto/perl-Perinci-Sub-property-timeout
-version: 0.03
+  homepage: http://search.cpan.org/dist/Perinci-Sub-Property-timeout/
+  repository: http://github.com/sharyanto/perl-Perinci-Sub-Property-timeout
+version: 0.04

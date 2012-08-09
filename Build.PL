@@ -8,7 +8,8 @@ use Module::Build 0.3601;
 my %module_build_args = (
   "build_requires" => {
     "Module::Build" => "0.3601",
-    "Test::More" => "0.96"
+    "Test::More" => "0.96",
+    "Test::Perinci::Sub::Wrapper" => 0
   },
   "configure_requires" => {
     "Module::Build" => "0.3601"
@@ -17,15 +18,15 @@ my %module_build_args = (
   "dist_author" => [
     "Steven Haryanto <stevenharyanto\@gmail.com>"
   ],
-  "dist_name" => "Perinci-Sub-property-timeout",
-  "dist_version" => "0.03",
+  "dist_name" => "Perinci-Sub-Property-timeout",
+  "dist_version" => "0.04",
   "license" => "perl",
-  "module_name" => "Perinci::Sub::property::timeout",
+  "module_name" => "Perinci::Sub::Property::timeout",
   "recommends" => {},
   "recursive_test_files" => 1,
   "requires" => {
-    "Perinci" => 0,
-    "Perinci::Sub::Wrapper" => "0.24",
+    "Perinci::Sub::Wrapper" => "0.30",
+    "Perinci::Util" => 0,
     "perl" => "5.010000"
   },
   "script_files" => []

@@ -12,7 +12,7 @@
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
       "version" : "2"
    },
-   "name" : "Perinci-Sub-property-timeout",
+   "name" : "Perinci-Sub-Property-timeout",
    "prereqs" : {
       "build" : {
          "requires" : {
@@ -26,24 +26,25 @@
       },
       "runtime" : {
          "requires" : {
-            "Perinci" : 0,
-            "Perinci::Sub::Wrapper" : "0.24",
+            "Perinci::Sub::Wrapper" : "0.30",
+            "Perinci::Util" : 0,
             "perl" : "5.010000"
          }
       },
       "test" : {
          "requires" : {
-            "Test::More" : "0.96"
+            "Test::More" : "0.96",
+            "Test::Perinci::Sub::Wrapper" : 0
          }
       }
    },
    "release_status" : "stable",
    "resources" : {
-      "homepage" : "http://search.cpan.org/dist/Perinci-Sub-property-timeout/",
+      "homepage" : "http://search.cpan.org/dist/Perinci-Sub-Property-timeout/",
       "repository" : {
-         "url" : "http://github.com/sharyanto/perl-Perinci-Sub-property-timeout"
+         "url" : "http://github.com/sharyanto/perl-Perinci-Sub-Property-timeout"
       }
    },
-   "version" : "0.03"
+   "version" : "0.04"
 }
 

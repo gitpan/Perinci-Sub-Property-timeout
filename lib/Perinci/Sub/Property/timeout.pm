@@ -1,4 +1,4 @@
-package Perinci::Sub::property::timeout;
+package Perinci::Sub::Property::timeout;
 
 use 5.010;
 use strict;
@@ -6,7 +6,7 @@ use warnings;
 
 use Perinci::Util qw(declare_property);
 
-our $VERSION = '0.03'; # VERSION
+our $VERSION = '0.04'; # VERSION
 
 declare_property(
     name => 'timeout',
@@ -50,11 +50,11 @@ __END__
 
 =head1 NAME
 
-Perinci::Sub::property::timeout - Specify function execution time limit
+Perinci::Sub::Property::timeout - Specify function execution time limit
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 SYNOPSIS
 
