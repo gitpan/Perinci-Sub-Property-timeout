@@ -4,6 +4,7 @@ author:
   - 'Steven Haryanto <stevenharyanto@gmail.com>'
 build_requires:
   Module::Build: 0.3601
+  Perinci::Sub::Wrapper: 0.30
   Test::More: 0.96
   Test::Perinci::Sub::Wrapper: 0
 configure_requires:
@@ -16,10 +17,9 @@ meta-spec:
   version: 1.4
 name: Perinci-Sub-Property-timeout
 requires:
-  Perinci::Sub::Wrapper: 0.30
-  Perinci::Util: 0
+  Perinci::Sub::PropertyUtil: 0
   perl: 5.010000
 resources:
   homepage: http://search.cpan.org/dist/Perinci-Sub-Property-timeout/
   repository: http://github.com/sharyanto/perl-Perinci-Sub-Property-timeout
-version: 0.04
+version: 0.05

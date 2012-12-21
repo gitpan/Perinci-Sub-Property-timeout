@@ -4,9 +4,9 @@ use 5.010;
 use strict;
 use warnings;
 
-use Perinci::Sub::PropertyUtil qw(declare_property);
+use Perinci::Util qw(declare_property);
 
-our $VERSION = '0.05'; # VERSION
+# VERSION
 
 declare_property(
     name => 'timeout',
@@ -44,22 +44,11 @@ declare_property(
 1;
 # ABSTRACT: Specify function execution time limit
 
-
-__END__
-=pod
-
-=head1 NAME
-
-Perinci::Sub::Property::timeout - Specify function execution time limit
-
-=head1 VERSION
-
-version 0.05
-
 =head1 SYNOPSIS
 
  # in function metadata
  timeout => 5,
+
 
 =head1 DESCRIPTION
 
@@ -70,20 +59,9 @@ This property's wrapper implementation uses C<alarm()> (C<ualarm()> replacement,
 for subsecond granularity, will be considered upon demand). If limit is reached,
 a 504 (timeout) status is returned.
 
+
 =head1 SEE ALSO
 
 L<Perinci>
 
-=head1 AUTHOR
-
-Steven Haryanto <stevenharyanto@gmail.com>
-
-=head1 COPYRIGHT AND LICENSE
-
-This software is copyright (c) 2012 by Steven Haryanto.
-
-This is free software; you can redistribute it and/or modify it under
-the same terms as the Perl 5 programming language system itself.
-
 =cut
-

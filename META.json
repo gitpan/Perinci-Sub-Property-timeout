@@ -24,15 +24,20 @@
             "Module::Build" : "0.3601"
          }
       },
+      "develop" : {
+         "requires" : {
+            "Test::Rinci" : "0.01"
+         }
+      },
       "runtime" : {
          "requires" : {
-            "Perinci::Sub::Wrapper" : "0.30",
-            "Perinci::Util" : 0,
+            "Perinci::Sub::PropertyUtil" : 0,
             "perl" : "5.010000"
          }
       },
       "test" : {
          "requires" : {
+            "Perinci::Sub::Wrapper" : "0.30",
             "Test::More" : "0.96",
             "Test::Perinci::Sub::Wrapper" : 0
          }
@@ -45,6 +50,6 @@
          "url" : "http://github.com/sharyanto/perl-Perinci-Sub-Property-timeout"
       }
    },
-   "version" : "0.04"
+   "version" : "0.05"
 }
 
