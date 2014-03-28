@@ -1,12 +1,12 @@
 package Perinci::Sub::Property::timeout;
 
-use 5.010;
+use 5.010001;
 use strict;
 use warnings;
 
 use Perinci::Sub::PropertyUtil qw(declare_property);
 
-our $VERSION = '0.05'; # VERSION
+our $VERSION = '0.06'; # VERSION
 
 declare_property(
     name => 'timeout',
@@ -26,17 +26,17 @@ declare_property(
 
             return unless $v > 0;
 
-            $self->select_section('before_call');
+            $self->select_section('before_call_right_before_call');
             $self->push_lines(
                 'local $SIG{ALRM} = sub { die "Timed out\n" };',
                 "alarm($v);");
 
-            $self->select_section('after_call');
+            $self->select_section('after_call_right_after_call');
             $self->push_lines('alarm(0);');
 
             $self->select_section('after_eval');
             $self->_errif(504, "\"Timed out ($v sec(s))\"",
-                          '$eval_err =~ /\ATimed out\b/');
+                          '$_w_eval_err =~ /\ATimed out\b/');
         },
     },
 );
@@ -44,9 +44,11 @@ declare_property(
 1;
 # ABSTRACT: Specify function execution time limit
 
-
 __END__
+
 =pod
+
+=encoding UTF-8
 
 =head1 NAME
 
@@ -54,7 +56,7 @@ Perinci::Sub::Property::timeout - Specify function execution time limit
 
 =head1 VERSION
 
-version 0.05
+version 0.06
 
 =head1 SYNOPSIS
 
@@ -74,16 +76,31 @@ a 504 (timeout) status is returned.
 
 L<Perinci>
 
+=head1 HOMEPAGE
+
+Please visit the project's homepage at L<https://metacpan.org/release/Perinci-Sub-Property-timeout>.
+
+=head1 SOURCE
+
+Source repository is at L<https://github.com/sharyanto/perl-Perinci-Sub-Property-timeout>.
+
+=head1 BUGS
+
+Please report any bugs or feature requests on the bugtracker website L<https://rt.cpan.org/Public/Dist/Display.html?Name=Perinci-Sub-Property-timeout>
+
+When submitting a bug or request, please include a test-file or a
+patch to an existing test-file that illustrates the bug or desired
+feature.
+
 =head1 AUTHOR
 
 Steven Haryanto <stevenharyanto@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2012 by Steven Haryanto.
+This software is copyright (c) 2014 by Steven Haryanto.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
